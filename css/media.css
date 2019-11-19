@@ -1,0 +1,60 @@
+@media (max-width: 1050px) {
+  /* line 2, ../sass/media.scss */
+  .visibl-lg {
+    display: none;
+  }
+
+  /* line 5, ../sass/media.scss */
+  .hamburger-menu {
+    display: flex;
+  }
+
+  /* line 8, ../sass/media.scss */
+  .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* line 12, ../sass/media.scss */
+  .email {
+    width: 200px;
+  }
+
+  /* line 16, ../sass/media.scss */
+  .download .container {
+    flex-wrap: inherit;
+  }
+
+  /* line 20, ../sass/media.scss */
+  footer .container {
+    justify-content: left;
+    margin: 0 50px 0;
+  }
+
+  /* line 25, ../sass/media.scss */
+  footer .footer-list {
+    margin: 0px;
+  }
+
+  /* line 29, ../sass/media.scss */
+  .blog .container {
+    justify-content: left;
+    margin: 0 50px 0;
+  }
+
+  /* line 34, ../sass/media.scss */
+  .arrow-prev {
+    left: 15px;
+  }
+
+  /* line 38, ../sass/media.scss */
+  .arrow-next {
+    right: 15px;
+  }
+}
+@media (min-width: 1050px) {
+  /* line 48, ../sass/media.scss */
+  .hamburger-menu {
+    display: none;
+  }
+}

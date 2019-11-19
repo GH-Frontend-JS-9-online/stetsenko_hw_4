@@ -1,0 +1,815 @@
+/* line 5, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 3, ../sass/style.scss */
+body {
+  margin: 0px;
+  font: 500 14px Montserrat;
+  overflow-x: hidden;
+}
+
+/* line 8, ../sass/style.scss */
+a {
+  color: #8d81ac;
+  text-decoration: none;
+}
+
+/*HEADER*/
+/* line 14, ../sass/style.scss */
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* line 22, ../sass/style.scss */
+.logo {
+  font: 800 24px lato;
+  display: flex;
+  align-items: center;
+  margin: 15px 30px;
+}
+
+/* line 29, ../sass/style.scss */
+.logo p {
+  margin: 15px;
+  color: #333333;
+}
+
+/* line 34, ../sass/style.scss */
+.logo p span {
+  color: #8d81ac;
+}
+
+/* line 38, ../sass/style.scss */
+nav {
+  font: 800 16px Montserrat;
+}
+
+/* line 42, ../sass/style.scss */
+nav a {
+  text-decoration: none;
+  margin-left: 50px;
+  color: #635c73;
+}
+
+/* line 48, ../sass/style.scss */
+.input_knopka {
+  width: 145px;
+  height: 40px;
+  border-radius: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  border: navajowhite;
+  background: #8d81ac;
+  margin: 15px;
+  cursor: pointer;
+}
+
+/* line 61, ../sass/style.scss */
+#menu__toggle {
+  opacity: 0;
+}
+
+/* line 65, ../sass/style.scss */
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+
+/* line 68, ../sass/style.scss */
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+/* line 72, ../sass/style.scss */
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* line 76, ../sass/style.scss */
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  right: 0;
+}
+
+/* line 81, ../sass/style.scss */
+.menu__btn {
+  display: flex;
+  align-items: center;
+  width: 26px;
+  cursor: pointer;
+}
+
+/* line 88, ../sass/style.scss */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background-color: #616161;
+  transition-duration: .25s;
+  right: 20px;
+}
+
+/* line 99, ../sass/style.scss */
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+  width: 20px;
+  left: 5px;
+}
+
+/* line 105, ../sass/style.scss */
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+  left: 0px;
+}
+
+/* line 111, ../sass/style.scss */
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  right: -100%;
+  width: 450px;
+  height: 760px;
+  margin: 90px 0 0;
+  list-style: none;
+  background-color: #333;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  transition-duration: .25s;
+  padding: 0px;
+}
+
+/* line 127, ../sass/style.scss */
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #fff;
+  font: 500 32px Montserrat;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+
+/* line 135, ../sass/style.scss */
+.menu__item:hover {
+  color: #8d81ac;
+}
+
+/* line 139, ../sass/style.scss */
+.menu__item-bor {
+  border-bottom: 1px rgba(244, 244, 244, 0.04) solid;
+}
+
+/*section*/
+/* line 145, ../sass/style.scss */
+.fork-app {
+  min-height: 804px;
+  overflow: hidden;
+  color: #8d81ac;
+  background: #000;
+  background-image: url(../img/bg-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 154, ../sass/style.scss */
+h1 {
+  font: 800 82px Montserrat;
+  color: #fff;
+  margin: 10px;
+}
+
+/* line 160, ../sass/style.scss */
+h2 {
+  font: 500 30px lato;
+  margin: 10px;
+  text-align: center;
+}
+
+/* line 166, ../sass/style.scss */
+.fork-app .container {
+  letter-spacing: 0;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+/* line 172, ../sass/style.scss */
+.version {
+  font: 500 16px Montserrat;
+  margin: 15px;
+}
+
+/* line 177, ../sass/style.scss */
+.download .container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* line 182, ../sass/style.scss */
+.button {
+  margin: -30px 0px 0px;
+  text-align: center;
+}
+
+/* line 187, ../sass/style.scss */
+.button .btn {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 390px;
+  background-color: #8d81ac;
+  color: #fff;
+  font: 800 21px Montserrat;
+  border-radius: 100px;
+  border: navajowhite;
+}
+
+/* line 200, ../sass/style.scss */
+.button p {
+  font: 500 14px Montserrat;
+  color: #848e97;
+  margin: 20px 0 0;
+}
+
+/* line 206, ../sass/style.scss */
+.editor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  text-align: center;
+  margin: 50px;
+}
+
+/* line 215, ../sass/style.scss */
+.editor h2 {
+  font: 800 54px Montserrat;
+  color: #635c73;
+}
+
+/* line 220, ../sass/style.scss */
+.editor p {
+  font: 400 21px Source Sans Pro;
+  color: #323232db;
+  margin: 20px;
+}
+
+/* line 226, ../sass/style.scss */
+.editor figure {
+  margin: 20px;
+}
+
+/* line 234, ../sass/style.scss */
+.features {
+  background-color: #f4f4f4;
+  padding-top: 50px;
+}
+
+/* line 239, ../sass/style.scss */
+.features .container {
+  align-items: flex-start;
+}
+
+/* line 245, ../sass/style.scss */
+.features li {
+  list-style-type: none;
+  display: flex;
+  width: 450px;
+  margin: 20px 65px 0 0;
+}
+
+/* line 252, ../sass/style.scss */
+.features h2 {
+  font: 800 48px Montserrat;
+  color: #8d81ac;
+  text-align: left;
+  margin: 0 0 50px 0;
+}
+
+/* line 259, ../sass/style.scss */
+.features-text h3 {
+  font: 500 16px Montserrat;
+  color: #323232;
+  margin-bottom: 20px;
+}
+
+/* line 265, ../sass/style.scss */
+.features-text p {
+  font: 500 14px Montserrat;
+  color: #848e97;
+}
+
+/* line 270, ../sass/style.scss */
+.features-list figure {
+  min-width: 90px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 20px 0 0;
+}
+
+/* line 278, ../sass/style.scss */
+.right-features {
+  margin: 0px 0px -100px;
+}
+
+/* line 282, ../sass/style.scss */
+.right-features figure {
+  box-shadow: 0px 0px 25px 0px rgba(0, 5, 5, 0.3);
+  background-image: -webkit-linear-gradient(90deg, black 0%, rgba(71, 72, 68, 0) 100%);
+  opacity: 0.949;
+  border-radius: 6px;
+}
+
+/* line 289, ../sass/style.scss */
+.people {
+  background-image: linear-gradient(to top, #4b3b4e 0%, transparent 100%), url(../img/bg-2.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 90px 0 0;
+  background-color: #4b3b4e;
+}
+
+/* line 297, ../sass/style.scss */
+.people .container {
+  flex-direction: column;
+}
+
+/* line 302, ../sass/style.scss */
+.people h2 {
+  font: 800 48px Montserrat;
+  color: #fff;
+  margin: 0 0 70px;
+}
+
+/* line 308, ../sass/style.scss */
+.talking {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 0 70px;
+}
+
+/* line 315, ../sass/style.scss */
+.talking figure {
+  width: 350px;
+  margin: 80px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* line 325, ../sass/style.scss */
+.img-talking {
+  height: 65px;
+  margin-bottom: 15px;
+}
+
+/* line 330, ../sass/style.scss */
+.people p {
+  font: 700 italic 16px Source Sans Pro;
+  line-height: 24px;
+  color: #fff;
+}
+
+/* line 336, ../sass/style.scss */
+.line {
+  width: 90%;
+  border: 1px #c7c7c7 solid;
+  opacity: .2;
+}
+
+/* line 342, ../sass/style.scss */
+.subscription {
+  background-color: #4b3b4e;
+}
+
+/* line 346, ../sass/style.scss */
+.subscription .container {
+  flex-direction: column;
+}
+
+/* line 350, ../sass/style.scss */
+.subscription h2 {
+  font: 800 48px Montserrat;
+  color: #fff;
+  margin: 70px 0 50px;
+}
+
+/* line 357, ../sass/style.scss */
+.subscription-text {
+  font: 400 14px Source Sans Pro;
+  color: #a291a5;
+  opacity: .8;
+  text-align: center;
+  max-width: 900px;
+  margin: 25px 0 55px;
+}
+
+/* line 366, ../sass/style.scss */
+.pricing {
+  display: flex;
+  margin: 35px 0 35px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* line 373, ../sass/style.scss */
+.pric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.11);
+  margin: 50px 10px 0;
+  justify-content: space-between;
+  height: 470px;
+}
+
+/* line 384, ../sass/style.scss */
+.pric:hover {
+  background-color: rgba(0, 0, 0, 0.11);
+  margin-top: 0;
+  height: 570px;
+}
+
+/* line 390, ../sass/style.scss */
+.pric .pric-head:hover {
+  background-color: rgba(0, 0, 0, 0.11);
+}
+
+/* line 394, ../sass/style.scss */
+.pric .cost:hover {
+  font: 500 82px Montserrat;
+}
+
+/* line 398, ../sass/style.scss */
+.pric ul:hover {
+  min-height: 100px;
+}
+
+/* line 407, ../sass/style.scss */
+.pric-head {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+/* line 411, ../sass/style.scss */
+.pric h3 {
+  font: 500 24px Montserrat;
+  color: #fff;
+  width: 250px;
+  text-transform: uppercase;
+  margin: 40px 0 30px;
+}
+
+/* line 419, ../sass/style.scss */
+.cost {
+  font: 500 60px Montserrat;
+  color: #fff;
+  margin: 40px 0 10px;
+}
+
+/* line 425, ../sass/style.scss */
+.month {
+  font: 500 14px Montserrat;
+  color: #fff;
+  opacity: .3;
+  text-transform: uppercase;
+  margin: 10px 0 10px;
+}
+
+/* line 433, ../sass/style.scss */
+.pric-line {
+  border: 4px #8d81ac solid;
+  width: 60px;
+}
+
+/* line 438, ../sass/style.scss */
+.pric ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  min-height: 80px;
+  font: 500 16px Montserrat;
+  color: #fff;
+  line-height: 28px;
+  margin: 20px 0 10px;
+}
+
+/* line 449, ../sass/style.scss */
+.btn-purchase {
+  width: 145px;
+  height: 40px;
+  border-radius: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  border: navajowhite;
+  background: rgba(255, 255, 255, 0.15);
+  margin: 10px 0 30px;
+  cursor: pointer;
+}
+
+/* line 461, ../sass/style.scss */
+.subscribe {
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+/* line 466, ../sass/style.scss */
+.email {
+  height: 40px;
+  border: navajowhite;
+  border-radius: 50px;
+  width: 340px;
+  padding-left: 30px;
+  color: #c8cbcf;
+}
+
+/* line 475, ../sass/style.scss */
+.btn-subscribe {
+  width: 145px;
+  height: 40px;
+  border-radius: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  border: navajowhite;
+  background: #8d81ac;
+  margin: 15px;
+  cursor: pointer;
+}
+
+/* line 487, ../sass/style.scss */
+.subscribe h2 {
+  font: 800 30px Montserrat;
+  color: #635c73;
+}
+
+/* line 493, ../sass/style.scss */
+.blog {
+  padding: 25px 0 25px;
+}
+
+/* line 497, ../sass/style.scss */
+.blog h2 {
+  font: 800 28px Montserrat;
+  color: #d3d1da;
+  margin: 35px 0 35px;
+}
+
+/* line 503, ../sass/style.scss */
+.blog h3 {
+  font: 500 16px Montserrat;
+  color: #8d81ac;
+  margin: 15px 0 15px;
+}
+
+/* line 509, ../sass/style.scss */
+.blog p {
+  font: 500 13px Montserrat;
+  color: #848e97;
+  line-height: 21px;
+}
+
+/* line 515, ../sass/style.scss */
+.release h3 {
+  color: #323232;
+}
+
+/* line 519, ../sass/style.scss */
+.blog-item {
+  max-width: 350px;
+}
+
+/* line 523, ../sass/style.scss */
+.blog .container {
+  align-items: baseline;
+}
+
+/* line 527, ../sass/style.scss */
+.new-blog .blog-item {
+  margin: 0 0 25px;
+}
+
+/* line 531, ../sass/style.scss */
+.btn-blog {
+  font: 500 14px Montserrat;
+  color: #8d81ac;
+  padding: 15px 10px 15px 25px;
+  border: navajowhite;
+  background-color: #f4f4f4;
+  margin: 25px 0 25px;
+  border-radius: 5px;
+}
+
+/*FOOTER*/
+/* line 546, ../sass/style.scss */
+footer {
+  padding: 25px 0 50px;
+}
+
+/* line 550, ../sass/style.scss */
+footer .container {
+  align-items: flex-start;
+}
+
+/* line 554, ../sass/style.scss */
+footer .logo {
+  margin: 0;
+}
+
+/* line 558, ../sass/style.scss */
+.footer-text {
+  font: 500 14px Montserrat;
+  color: #848e97;
+  line-height: 21px;
+}
+
+/* line 564, ../sass/style.scss */
+.footer-block {
+  width: 250px;
+}
+
+/* line 568, ../sass/style.scss */
+.footer-block-1 {
+  width: 300px;
+}
+
+/* line 572, ../sass/style.scss */
+.footer-list {
+  margin: 0px 0 0 100px;
+}
+
+/* line 575, ../sass/style.scss */
+.footer-list li {
+  margin: 5px 0;
+}
+
+/* line 579, ../sass/style.scss */
+footer h4 {
+  font: 500 16px Montserrat;
+  color: #323232;
+  margin: 10px 0 15px;
+}
+
+/* line 585, ../sass/style.scss */
+footer ul {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+  font: 500 15px Montserrat;
+  color: #8d81ac;
+}
+
+/* line 593, ../sass/style.scss */
+.phone {
+  font: 800 30px Montserrat;
+  color: #3f3f3f;
+  margin: 10px 0 5px;
+}
+
+/* line 598, ../sass/style.scss */
+.avalible {
+  margin: 5px 0 25px;
+  font-size: 13px;
+  color: #848e97;
+}
+
+/* line 604, ../sass/style.scss */
+.adress {
+  margin: 15px 0 0;
+  font: 500 14px Montserrat;
+  color: #848e97;
+  line-height: 25px;
+}
+
+/* line 611, ../sass/style.scss */
+.social {
+  padding: 90px 0 50px;
+}
+
+/* line 615, ../sass/style.scss */
+.social-links {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* line 621, ../sass/style.scss */
+.btn-social {
+  width: 240px;
+  height: 50px;
+  border: navajowhite;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+/* line 630, ../sass/style.scss */
+.github {
+  background-color: #f3f3f3;
+  font: 500 21px Montserrat;
+  color: #000;
+}
+
+/* line 636, ../sass/style.scss */
+.twitter {
+  background-color: #f3f3f3;
+  font: 500 21px Montserrat;
+  color: #26a6d1;
+}
+
+/* line 642, ../sass/style.scss */
+.fb {
+  background-color: #3b5998;
+  font: 500 21px Montserrat;
+  color: #fff;
+}
+
+/* line 648, ../sass/style.scss */
+.social .container {
+  justify-content: center;
+}
+
+/* line 651, ../sass/style.scss */
+.block-social-link {
+  margin: 20px 35px 0;
+}
+
+/* line 655, ../sass/style.scss */
+.social-img {
+  margin: 0 25px 0;
+}

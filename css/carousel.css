@@ -1,0 +1,147 @@
+/* line 1, ../sass/carousel.scss */
+.reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 6, ../sass/carousel.scss */
+.reviews-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 12, ../sass/carousel.scss */
+.reviews-info figcaption {
+  margin-left: 20px;
+  font: 800 24px Montserrat;
+  color: #635c73;
+}
+
+/* line 18, ../sass/carousel.scss */
+.social .signature {
+  font: 500 16px Montserrat;
+  color: #8d81ac;
+  margin: 10px 0;
+}
+
+/* line 24, ../sass/carousel.scss */
+.social-rev {
+  font: 500 20px Source Sans Pro;
+  color: #333;
+  text-align: center;
+  max-width: 730px;
+  line-height: 32px;
+}
+
+/* line 32, ../sass/carousel.scss */
+.social h4 {
+  font: 500 16px Montserrat;
+  color: #848e97;
+  text-align: center;
+  margin: 20px 0 0;
+}
+
+/* line 40, ../sass/carousel.scss */
+.social-rev span {
+  color: #8d81ac;
+}
+
+/* line 45, ../sass/carousel.scss */
+.carousel-wrapper {
+  height: 350px;
+  position: relative;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+/* line 51, ../sass/carousel.scss */
+.carousel-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 50px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+/* line 61, ../sass/carousel.scss */
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 12px;
+}
+
+/* line 68, ../sass/carousel.scss */
+.arrow-prev {
+  left: -30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(135deg);
+}
+
+/* line 75, ../sass/carousel.scss */
+.arrow-next {
+  right: -30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/* line 82, ../sass/carousel.scss */
+.light {
+  color: white;
+}
+
+@media (max-width: 480px) {
+  /* line 87, ../sass/carousel.scss */
+  .arrow, .light .arrow {
+    background-size: 10px;
+    background-position: 10px 50%;
+  }
+}
+/*Select every element*/
+/* line 94, ../sass/carousel.scss */
+[id^="item"] {
+  display: none;
+}
+
+/* line 98, ../sass/carousel.scss */
+.item-1 {
+  z-index: 2;
+  opacity: 1;
+  background: url("");
+  background-size: cover;
+}
+
+/* line 104, ../sass/carousel.scss */
+.item-2 {
+  background: url("");
+  background-size: cover;
+}
+
+/* line 108, ../sass/carousel.scss */
+.item-3 {
+  background: url("");
+  background-size: cover;
+}
+
+/* line 113, ../sass/carousel.scss */
+*:target ~ .item-1 {
+  opacity: 0;
+}
+
+/* line 117, ../sass/carousel.scss */
+#item-1:target ~ .item-1 {
+  opacity: 1;
+}
+
+/* line 121, ../sass/carousel.scss */
+#item-2:target ~ .item-2, #item-3:target ~ .item-3 {
+  z-index: 3;
+  opacity: 1;
+}
